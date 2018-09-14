@@ -1,0 +1,56 @@
+---
+title: "Installation Manual"
+author: "Jack Yutong Li"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+This is a simple manual for installing the package from a local directory. Installing from github will be available once I set it up online.
+
+## Required Packages
+
+There are two required softwares and packages that needs to be installed before installing the actual package. It's also recommended that the user updates his R (NOT Rstudio) to the newest version (currently 3.5.1).
+
+* devtools (\textcolor{blue}{https://www.r-project.org/nosvn/pandoc/devtools.html})
+* Rtools (\textcolor{blue}{https://cran.r-project.org/bin/windows/Rtools/})
+
+The below packages are labeled as dependencies within the package description file and thus should be automatically installed along with this package if they are not within the user's existing library. If not, the user will need to manually install these packages themselves.
+
+* Rcpp (For compiling Rstan's C++ code)
+* rstan
+* rstantools
+* methods
+* LaplacesDemon
+* DescTools
+* doParallel
+* foreach
+
+\textbf{Attention}: Rstan requires additional setup if this is the user's first time running the program. For more details please refer to \textcolor{blue}{https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started}.
+
+
+## Installation
+
+1. \textbf{Copy and paste} the package folder into a desired location on the user's local machine. \textbf{Do not modify contents in original package}.
+
+2. Load devtools package and install the AWBLRM package using devtools. The installation will take up to 3 minutes.
+```{r, eval = FALSE}
+library(devtools)
+devtools::install("directory of package", dependencies = TRUE)
+```
+
+3. Load the installed package. Test the package by running the examples documented within the two main functions.
+```{r, eval = FALSE}
+library(AWBLRM)
+?parallel.trial()
+?decision.dose()
+```
+
+## Usage
+The two main functions to use in the package are $\textbf{parallel.trials()}$ and $\textbf{decision.dose()}$. The first function runs a specified amount of simulated trials in parallel with the input settings. The latter function recommends the next / final dose according to the input observed information. For details on how the function is used, please refer to the help file. For the mathematical details of the model, please refer to the report.
+
+For regular BLRM, set the number of cycles (parameter: K) and time of assessment (parameter: assessment) both to 1 to enforce the weight of each observation to be 1. 
+
+The decrease in computation time is not linear with respect to the number of parallel threads. When running the simulation in parallel, make sure to close all other applications to maximize the resources allocated to the computation task.
+
+

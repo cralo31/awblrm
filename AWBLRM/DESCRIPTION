@@ -1,0 +1,17 @@
+Package: AWBLRM
+Title: Bayesian Dose-finding Method with Adaptive Time-to-Event Weight
+Version: 0.0.1
+Authors@R: person("Jack Yutong", "Li", email = "yutongli92@gmail.com", role = c("aut", "cre"))
+Description: This packages implements Bo Huang's (2014) proposed adaptive time-to-event weight for bayesian dose-finding models with flexibility in setting up the design of the study.
+License: GPL (>=3)
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 3.4.0), Rcpp (>= 0.12.18), methods, rstan (>= 2.17.3), rstantools (>= 1.5.0), LaplacesDemon, DescTools, doParallel, foreach
+Imports: rstan (>= 2.17.3), rstantools (>= 1.5.0), LaplacesDemon, DescTools, doParallel, foreach
+LinkingTo: StanHeaders (>= 2.17.2), rstan (>= 2.17.3), BH (>= 1.66.0-1), Rcpp (>= 0.12.18), RcppEigen (>= 0.3.3.4.0)
+SystemRequirements: GNU make
+NeedsCompilation: yes
+RoxygenNote: 6.1.0
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
