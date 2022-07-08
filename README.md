@@ -1,7 +1,6 @@
-# Adaptive Time-to-event Weight Bayesian Logistic Regression Model
-Dose-finding package
+# Adaptive Time-to-event Weight Bayesian Logistic Regression Model Incorporating Cycle Information for Dose Finding 
 
-This package is for the Bayesian Dose-Finding Model with Adaptive Time-to-event Weight
+This package is for the talk on Bayesian Dose-Finding Model with Adaptive Time-to-event Weight
 Incorporating Cycle Information for Immuno-oncology Compounds. 
 
 To install this on R/Rstudio, simply install directly from github with the _devtools_ package.
