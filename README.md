@@ -1,4 +1,4 @@
-# awblrm
+# Adaptive Time-to-event Weight Bayesian Logistic Regression Model
 Dose-finding package
 
 This package is for the Bayesian Dose-Finding Model with Adaptive Time-to-event Weight
