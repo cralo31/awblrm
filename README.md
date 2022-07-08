@@ -17,7 +17,11 @@ There are 2 main functions. One for recommending the next dose according to the 
 
 2. Set up a simulated trial with prespecifed number of cores to compute in parallel. There are many parameters available to tune depending on the nature of the study and patient information. 
 ```{r}
-?simulation()
+# For running trials in parallel
+?parallel.trial() 
+
+# For running a single simulated trial
+?trial()
 ```
 
 Run the following example. Set up a 3-cycle treatment design with 5 different dose levels. The are currently 9 patients (3 cohorts of 3) observed at the assessment time window. The function outputs the list with two elements. The first element is the next recommended dose. The second element is a summary information
