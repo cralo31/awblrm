@@ -8,7 +8,7 @@ To install this on R/Rstudio, simply install directly from github with the _devt
 library(devtools)
 install_github("cralo31/awblrm")
 ```
-There are 2 main functions. 
+There are 2 main functions. One for recommending the next dose according to the current trial information, and the other for repeated random trial simulations for hypothetical scenarios.
 
 1. Recommend the next dose according to the current patient's information. 
 ```{r}
@@ -20,22 +20,26 @@ There are 2 main functions.
 ?simulation()
 ```
 
-Run the following example. 
+Run the following example. Set up a 3-cycle treatment design with 5 different dose levels. The are currently 9 patients (3 cohorts of 3) observed at the assessment time window. The function outputs the list with two elements. The first element is the next recommended dose. The second element is a summary information
+#'matrix of the implemented decision rule.
 ```{r}
-#'# Consider a 3-cycle treatment scenario with observed information of 9 patients #
-#'
-#'all_doses = c(1, 2, 3, 4, 5)
-#'max_cycle = 3
-#'cycle_time = 30
-#'mode = 1
-#'target = 0.25
-#'od_control = 1
-#'cohort = c(1, 1, 1, 2, 2, 2, 3, 3, 3)
-#'dlt = c(0, 0, 0, 1, 0, 0, 1, 0, 1)
-#'dose = c(1, 1, 1, 2, 2, 2, 2, 2, 2)
-#'dlt_cycle = c(-1, -1, -1, 2, -1, -1, 3, -1, 2)
-#'obs_time = c(90, 45, 90, 35, 90, 75, 80, 90, 55)
-#'
-#'test = decision.dose(all_doses, max_cycle, cycle_time, mode, target, od_control, cohort, dlt,
-#'dose, dlt_cycle, obs_time)
+# Consider a 3-cycle treatment scenario with observed information of 9 patients #
+
+# Current trial information
+all_doses = c(1, 2, 3, 4, 5)
+max_cycle = 3
+cycle_time = 30
+mode = 1
+target = 0.25
+od_control = 1
+cohort = c(1, 1, 1, 2, 2, 2, 3, 3, 3)
+dlt = c(0, 0, 0, 1, 0, 0, 1, 0, 1)
+dose = c(1, 1, 1, 2, 2, 2, 2, 2, 2)
+dlt_cycle = c(-1, -1, -1, 2, -1, -1, 3, -1, 2)
+obs_time = c(90, 45, 90, 35, 90, 75, 80, 90, 55)
+
+# Output the next recommended dose
+test = decision.dose(all_doses, max_cycle, cycle_time, mode, target, od_control, cohort, dlt,
+dose, dlt_cycle, obs_time)
+test
 ```
