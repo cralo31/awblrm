@@ -12,7 +12,7 @@ There are 2 main functions. One for recommending the next dose according to the 
 
 1. Recommend the next dose according to the current patient's information. 
 ```{r}
-?next.dose()
+?decision.dose()
 ```
 
 2. Set up a simulated trial with prespecifed number of cores to compute in parallel. There are many parameters available to tune depending on the nature of the study and patient information. 
