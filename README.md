@@ -20,8 +20,8 @@ There are 2 main functions.
 ```{r}
 ?simulation()
 ```
--true Matrix; Pre-defined true dose-toxicity relationship. The input should be a 2-by-p matrix, with the 1st row being the
--levels and the 2nd row being the corresponding probability of DLT.
+- true Matrix; Pre-defined true dose-toxicity relationship. The input should be a 2-by-p matrix, with the 1st row being the
+- levels and the 2nd row being the corresponding probability of DLT.
 -n Integer; Number of trials to be simulated. Minimum of 1.
 -cores Integer; Number of cores to utilize for parallel computing. Defaults to 1.
 -K Integer; Number of treatment cycles considered.
