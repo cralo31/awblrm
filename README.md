@@ -1,7 +1,7 @@
 # Adaptive Time-to-event Weight Bayesian Logistic Regression Model Incorporating Cycle Information for Dose Finding 
 
 This package is for the talk on Bayesian Dose-Finding Model with Adaptive Time-to-event Weight
-Incorporating Cycle Information for Immuno-oncology Compounds. 
+Incorporating Cycle Information for Immuno-oncology Compounds. The package provides a flexible framework for phase 1 dose-escalation trial designs, including patient enrollment, treatment cycles, toxicity assessment window, decision rule, stopping criteria, and escalation with overdose control. 
 
 To install this on R/Rstudio, simply install directly from github with the _devtools_ package.
 ```{r}
